@@ -1,17 +1,16 @@
-
-
 public class SinglyLinkedListApp {
     public static void main(String[] args) {
 
-        SinglyLinkedList sll = new SinglyLinkedList();
-        sll.head= new ListNode(10);
-        ListNode second = new ListNode(1);
-        ListNode third = new ListNode(8);
+        // Let's create a linked list demonstrated in slide
+        //10 --> 8 --> 11 --> null
+        ListNode head = new ListNode(10);
+        ListNode second = new ListNode(2);
+        ListNode third = new ListNode(1);
         ListNode fourth = new ListNode(11);
 
         //Now we connect them together to form a chain
 
-        sll.head.next=second;       //10 -->1
+        head.next=second;       //10 -->1
         second.next = third;        //10 -->1-->8
         third.next = fourth;        //10 -->1-->8-->null
 
@@ -24,5 +23,27 @@ public class SinglyLinkedListApp {
         sll.printElement();
         sll.insert(2,200);
         sll.printElement();
+
+        System.out.println(sll.deleteFirst().data);
+        sll.printElement();
+
+        System.out.println(sll.deleteLast().data);
+        sll.printElement();
+
+        sll.delete(1);
+        sll.printElement();
+
+        System.out.println("---------------------");
+
+        if(sll.find(sll.head,11)){
+            System.out.println("Search key found !!!");
+        }else {
+            System.out.println("Sear key not found !!!");
+        }
+
+        ListNode sll1 = sll.reverse(sll.head);
+        sll.printElement(sll1.);
+
     }
 }
+

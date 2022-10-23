@@ -1,4 +1,5 @@
 public class ListNode {
+
     int data;
     ListNode next;
 
@@ -7,3 +8,4 @@ public class ListNode {
         this.next = null;
     }
 }
+
