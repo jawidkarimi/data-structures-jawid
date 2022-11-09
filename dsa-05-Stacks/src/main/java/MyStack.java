@@ -4,9 +4,13 @@ public class MyStack<T> {
     public SNode<T> bottom;
     public SNode<T> top;
     int size;
+
+
     public boolean isEmpty(){
         return bottom==null;
     }
+
+
     public void push(T item){
         SNode<T> node=new SNode<>(item);
         if (isEmpty()) bottom=top=node;
@@ -16,9 +20,11 @@ public class MyStack<T> {
         }
         size++;
     }
+
     public T peek(){
         return (T) top.value;
     }
+    
     public T pop(){
         SNode peekNode;
         if (isEmpty()) throw new NoSuchElementException();
